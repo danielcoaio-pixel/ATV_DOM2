@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Natural do Paraná</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            min-height: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav id="navegacao">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+        <!-- O JavaScript criará os elementos aqui -->
+    </main>
+
+    <script>
+        // ==========================================
+        // 1. ALTERAR O CSS (CORES E CENTRALIZAÇÃO)
+        // ==========================================
+        
+        // Troca a cor de fundo do site para um tom azul de praia bem suave
+        document.body.style.backgroundColor = "#e6f2f7";
+
+        // Centraliza o texto do cabeçalho e da navegação
+        document.getElementById("cabecalho").style.textAlign = "center";
+        document.getElementById("navegacao").style.textAlign = "center";
+
+        // Seleciona o main e centraliza todos os elementos dentro dele
+        const main = document.getElementById("conteudo");
+        main.style.textAlign = "center";
+        main.style.maxWidth = "800px";
+        main.style.margin = "0 auto"; // Centraliza o bloco do main na tela
+
+        // ==========================================
+        // 2. CRIAR OS ELEMENTOS HTML DO NOVO TEMA
+        // ==========================================
+
+        // Criar o Título (h1)
+        const titulo = document.createElement("h1");
+        titulo.textContent = "Ilha do Mel";
+        main.appendChild(titulo);
+
+        // Criar a Imagem (img)
+        const imagem = document.createElement("img");
+        // Link direto de uma foto real do Farol das Conchas na Ilha do Mel
+        imagem.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTARO1kS1oTUESywFUz95kRMxVq6xanJ1ruWlU718JF9A&s=10";
+        imagem.alt = "Farol das Conchas na Ilha do Mel";
+        imagem.style.width = "100%";
+        imagem.style.maxWidth = "500px"; // Mantém o tamanho proporcional
+        imagem.style.height = "auto";
+        main.appendChild(imagem);
+
+        // Criar o Parágrafo 1 (p)
+        const paragrafo1 = document.createElement("p");
+        paragrafo1.textContent = "A Ilha do Mel está localizada na embocadura da Baía de Paranaguá e é uma das reservas ecológicas mais bonitas e preservadas do Paraná. Na ilha não é permitida a entrada de carros, e o deslocamento é feito apenas por trilhas de areia.";
+        main.appendChild(paragrafo1);
+
+        // Criar o Parágrafo 2 (p)
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.textContent = "Seus principais pontos turísticos são o histórico Farol das Conchas, a Fortaleza de Nossa Senhora dos Prazeres e a Gruta das Encantadas, cercados por praias desertas e muita natureza nativa.";
+        main.appendChild(paragrafo2);
+    </script>
+
+</body>
+</html>
